@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B4B76697C030C1A7CFEE76 /* libPods-RallyPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B45BD67B0DF03D3EC7A5F5 /* libPods-RallyPicker.a */; };
+		6E1BEC501A11DB8000E84330 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1BEC4F1A11DB8000E84330 /* SpriteKit.framework */; };
 		6EEC055B1A11D9010054FD12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC055A1A11D9010054FD12 /* main.m */; };
 		6EEC055E1A11D9010054FD12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC055D1A11D9010054FD12 /* AppDelegate.m */; };
 		6EEC05611A11D9010054FD12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC05601A11D9010054FD12 /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CB54F6F2E240E3966A92FA8 /* Pods-RallyPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RallyPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-RallyPicker/Pods-RallyPicker.release.xcconfig"; sourceTree = "<group>"; };
+		6E1BEC4E1A11DB2200E84330 /* RallyPicker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RallyPicker-Prefix.pch"; sourceTree = "<group>"; };
+		6E1BEC4F1A11DB8000E84330 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		6EEC05551A11D9010054FD12 /* RallyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RallyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEC05591A11D9010054FD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EEC055A1A11D9010054FD12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,8 @@
 		6EEC056E1A11D9010054FD12 /* RallyPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RallyPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEC05731A11D9010054FD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EEC05741A11D9010054FD12 /* RallyPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RallyPickerTests.m; sourceTree = "<group>"; };
+		B8B45BD67B0DF03D3EC7A5F5 /* libPods-RallyPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RallyPicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED206F4A6C5B10A1422EB105 /* Pods-RallyPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RallyPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RallyPicker/Pods-RallyPicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1BEC501A11DB8000E84330 /* SpriteKit.framework in Frameworks */,
+				23B4B76697C030C1A7CFEE76 /* libPods-RallyPicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0526C27A67D27A5FAFA0783C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED206F4A6C5B10A1422EB105 /* Pods-RallyPicker.debug.xcconfig */,
+				2CB54F6F2E240E3966A92FA8 /* Pods-RallyPicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6EEC054C1A11D9010054FD12 = {
 			isa = PBXGroup;
 			children = (
 				6EEC05571A11D9010054FD12 /* RallyPicker */,
 				6EEC05711A11D9010054FD12 /* RallyPickerTests */,
 				6EEC05561A11D9010054FD12 /* Products */,
+				0526C27A67D27A5FAFA0783C /* Pods */,
+				FC3F099B62217E46E7EFC922 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +116,7 @@
 		6EEC05581A11D9010054FD12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E1BEC4E1A11DB2200E84330 /* RallyPicker-Prefix.pch */,
 				6EEC05591A11D9010054FD12 /* Info.plist */,
 				6EEC055A1A11D9010054FD12 /* main.m */,
 			);
@@ -119,6 +140,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FC3F099B62217E46E7EFC922 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E1BEC4F1A11DB8000E84330 /* SpriteKit.framework */,
+				B8B45BD67B0DF03D3EC7A5F5 /* libPods-RallyPicker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EEC05781A11D9010054FD12 /* Build configuration list for PBXNativeTarget "RallyPicker" */;
 			buildPhases = (
+				452542F73A4538743513655A /* Check Pods Manifest.lock */,
 				6EEC05511A11D9010054FD12 /* Sources */,
 				6EEC05521A11D9010054FD12 /* Frameworks */,
 				6EEC05531A11D9010054FD12 /* Resources */,
+				7D53B0B3D7CCD638D9EB20D0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +245,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		452542F73A4538743513655A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D53B0B3D7CCD638D9EB20D0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RallyPicker/Pods-RallyPicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EEC05511A11D9010054FD12 /* Sources */ = {
@@ -341,9 +406,14 @@
 		};
 		6EEC05791A11D9010054FD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED206F4A6C5B10A1422EB105 /* Pods-RallyPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RallyPicker/RallyPicker-Prefix.pch";
 				INFOPLIST_FILE = RallyPicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,9 +421,14 @@
 		};
 		6EEC057A1A11D9010054FD12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CB54F6F2E240E3966A92FA8 /* Pods-RallyPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RallyPicker/RallyPicker-Prefix.pch";
 				INFOPLIST_FILE = RallyPicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +487,7 @@
 				6EEC057A1A11D9010054FD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EEC057B1A11D9010054FD12 /* Build configuration list for PBXNativeTarget "RallyPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +496,7 @@
 				6EEC057D1A11D9010054FD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
