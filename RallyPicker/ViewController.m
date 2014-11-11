@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "RHPicker.h"
 
-@interface ViewController ()
+@interface ViewController () <RHPickerDelegate>
+
+@property(nonatomic, strong) RHPicker *picker;
 
 @end
 
@@ -16,12 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSArray *items = @[@"BEFORE BED", @"AFTER WAKING UP", @"AFTER BRUSHING TEETH", @"BEFORE WORK", @"AFTER GETTING TO WORK"];
+    self.picker = [[RHPicker alloc] initWithParentView:self.view
+                                             withItems:items
+                                         selectedColor:[UIColor redColor]
+                                          defaultColor:[UIColor grayColor]];
+    self.picker.delegate = self;
+}
+
+- (void)picker:(RHPicker *)picker didSelectItem:(NSString *)string {
+    NSLog(@"Item Selected: %@", string);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

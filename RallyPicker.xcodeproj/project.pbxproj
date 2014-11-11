@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		23B4B76697C030C1A7CFEE76 /* libPods-RallyPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B45BD67B0DF03D3EC7A5F5 /* libPods-RallyPicker.a */; };
 		6E1BEC501A11DB8000E84330 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1BEC4F1A11DB8000E84330 /* SpriteKit.framework */; };
+		6EC41BBC1A11DF4D00F4AFCD /* RHPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC41BBB1A11DF4D00F4AFCD /* RHPicker.m */; };
+		6EC41BBF1A11E5B200F4AFCD /* RHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC41BBE1A11E5B200F4AFCD /* RHCollectionViewCell.m */; };
 		6EEC055B1A11D9010054FD12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC055A1A11D9010054FD12 /* main.m */; };
 		6EEC055E1A11D9010054FD12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC055D1A11D9010054FD12 /* AppDelegate.m */; };
 		6EEC05611A11D9010054FD12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEC05601A11D9010054FD12 /* ViewController.m */; };
@@ -32,6 +34,10 @@
 		2CB54F6F2E240E3966A92FA8 /* Pods-RallyPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RallyPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-RallyPicker/Pods-RallyPicker.release.xcconfig"; sourceTree = "<group>"; };
 		6E1BEC4E1A11DB2200E84330 /* RallyPicker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RallyPicker-Prefix.pch"; sourceTree = "<group>"; };
 		6E1BEC4F1A11DB8000E84330 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		6EC41BBA1A11DF4D00F4AFCD /* RHPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHPicker.h; sourceTree = "<group>"; };
+		6EC41BBB1A11DF4D00F4AFCD /* RHPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHPicker.m; sourceTree = "<group>"; };
+		6EC41BBD1A11E5B200F4AFCD /* RHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCollectionViewCell.h; sourceTree = "<group>"; };
+		6EC41BBE1A11E5B200F4AFCD /* RHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCollectionViewCell.m; sourceTree = "<group>"; };
 		6EEC05551A11D9010054FD12 /* RallyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RallyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEC05591A11D9010054FD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EEC055A1A11D9010054FD12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +111,10 @@
 				6EEC055D1A11D9010054FD12 /* AppDelegate.m */,
 				6EEC055F1A11D9010054FD12 /* ViewController.h */,
 				6EEC05601A11D9010054FD12 /* ViewController.m */,
+				6EC41BBA1A11DF4D00F4AFCD /* RHPicker.h */,
+				6EC41BBB1A11DF4D00F4AFCD /* RHPicker.m */,
+				6EC41BBD1A11E5B200F4AFCD /* RHCollectionViewCell.h */,
+				6EC41BBE1A11E5B200F4AFCD /* RHCollectionViewCell.m */,
 				6EEC05621A11D9010054FD12 /* Main.storyboard */,
 				6EEC05651A11D9010054FD12 /* Images.xcassets */,
 				6EEC05671A11D9010054FD12 /* LaunchScreen.xib */,
@@ -286,7 +296,9 @@
 			files = (
 				6EEC05611A11D9010054FD12 /* ViewController.m in Sources */,
 				6EEC055E1A11D9010054FD12 /* AppDelegate.m in Sources */,
+				6EC41BBC1A11DF4D00F4AFCD /* RHPicker.m in Sources */,
 				6EEC055B1A11D9010054FD12 /* main.m in Sources */,
+				6EC41BBF1A11E5B200F4AFCD /* RHCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
