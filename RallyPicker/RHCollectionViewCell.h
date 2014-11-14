@@ -22,8 +22,6 @@
 
 - (void)scaleToRatio:(CGFloat)ratio;
 
-- (void)pulseView:(BOOL)pulse;
-
 - (void)pulseView:(BOOL)pulse withDelay:(CGFloat)delay;
 
 @end

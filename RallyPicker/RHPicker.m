@@ -13,8 +13,8 @@
 
 @property(nonatomic, readwrite) CGFloat itemHeight;
 @property(nonatomic) NSRange selectedRange;
-
 @property(nonatomic) CGAffineTransform identityTransform;
+
 @end
 
 @implementation RHPicker
@@ -26,7 +26,6 @@ static NSString * const reuseIdentifier = @"Cell";
                          withItems:(NSArray *)items
                      selectedColor:(UIColor *)selectedColor
                       defaultColor:(UIColor *)defaultColor {
-    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     flowLayout.minimumInteritemSpacing = CGFLOAT_MAX;
@@ -43,6 +42,8 @@ static NSString * const reuseIdentifier = @"Cell";
         self.collectionView.frame = self.view.frame = view.frame;
         self.collectionView.bounds = self.view.bounds = view.bounds;
         self.collectionView.clipsToBounds = YES;
+        self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
         self.collectionView.bounces = self.collectionView.alwaysBounceVertical = YES;
         [view addSubview:self.view];
         
@@ -86,6 +87,7 @@ referenceSizeForFooterInSection:(NSInteger)section {
         [cell scaleToRatio:ratio];
     }
 }
+
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView
                      withVelocity:(CGPoint)velocity
               targetContentOffset:(inout CGPoint *)targetContentOffset {
@@ -95,22 +97,23 @@ referenceSizeForFooterInSection:(NSInteger)section {
         CGFloat locationInSuperView = cell.center.y - targetContentOffset->y;
         BOOL selected = NSLocationInRange(locationInSuperView, self.selectedRange);
         if (selected) {
-            [self.collectionView scrollToItemAtIndexPath:indexPath
-                                        atScrollPosition:UICollectionViewScrollPositionCenteredVertically
-                                                animated:YES];
+            [self.collectionView selectItemAtIndexPath:indexPath
+                                              animated:YES
+                                        scrollPosition:UICollectionViewScrollPositionCenteredVertically];
             self.currentIndex = indexPath.row;
-            if ([self.delegate respondsToSelector:@selector(picker:didSelectItem:)]) {
-                [self.delegate picker:self didSelectItem:[self objectInPickerItemsAtIndex:indexPath.row]];
-            }
             return;
         }
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(picker:didSelectItem:)]) {
+        [self.delegate picker:self didSelectItem:self.pickerItems[indexPath.row]];
+    }
+}
+
 - (NSArray *)pickerItems {
-    return WSM_LAZY(_pickerItems, ({
-        @[@""];
-    }));
+    return WSM_LAZY(_pickerItems, @[@""]);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
@@ -164,7 +167,9 @@ referenceSizeForFooterInSection:(NSInteger)section {
     return CGRectGetHeight(self.view.frame);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout *)collectionViewLayout
+minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0.0f;
 }
 

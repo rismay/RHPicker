@@ -17,13 +17,11 @@
 + (void)load {
     WSMLogger *logger = WSMLogger.sharedInstance;
     [DDLog addLogger:logger];
-    
     // Customize the WSLogger
     logger.formatStyle = kWSMLogFormatStyleQueue;
     logger[kWSMLogFormatKeyFile] = @7;
     logger[kWSMLogFormatKeyFunction] = @40;
 }
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
